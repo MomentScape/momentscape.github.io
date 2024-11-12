@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>VR Scene</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Adding textures and model -->
+      <a-assets>
+        <img id="ceilingTexture" src="./textures/ceiling.png" />
+        <img id="floorTexture" src="./textures/floor.png" />
+        <img id="wallTexture" src="./textures/wall.png" />
+        <a-asset-item id="gltfModel" src="./model/model.gltf"></a-asset-item>
+      </a-assets>
+
+      <!-- Floor -->
+      <a-plane src="#floorTexture" rotation="-90 0 0" width="20" height="20" position="0 0 0"></a-plane>
+
+      <!-- Ceiling -->
+      <a-plane src="#ceilingTexture" rotation="90 0 0" width="20" height="20" position="0 5 0"></a-plane>
+
+      <!-- Walls -->
+      <a-plane src="#wallTexture" width="20" height="5" position="0 2.5 -10"></a-plane>
+      <a-plane src="#wallTexture" rotation="0 180 0" width="20" height="5" position="0 2.5 10"></a-plane>
+      <a-plane src="#wallTexture" rotation="0 90 0" width="20" height="5" position="-10 2.5 0"></a-plane>
+      <a-plane src="#wallTexture" rotation="0 -90 0" width="20" height="5" position="10 2.5 0"></a-plane>
+
+      <!-- Model -->
+      <a-entity gltf-model="#gltfModel" position="0 2 -5" scale="2 2 2"></a-entity>
+    </a-scene>
+  </body>
+</html>

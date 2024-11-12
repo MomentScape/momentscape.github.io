@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MomentScape</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: #282c34;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .gallery-item {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: calc(50% - 20px);
+            max-width: 400px;
+        }
+        @media (max-width: 600px) {
+            .gallery-item {
+                width: 100%;
+            }
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        
+            height: 250px;
+            object-fit: cover;
+        }
+        .gallery-item-content {
+            padding: 15px;
+        }
+        .gallery-item-content h3 {
+            margin: 0 0 10px;
+        }
+        .gallery-item-content p {
+            margin: 0 0 20px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #282c34;
+            color: white;
+            text-decoration: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #282c34;
+            color: white;
+        
+            margin-top: auto;
+        }
+        footer a {
+            color: #61dafb;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MomentScape</h1>
+        <p>MomentScape transforms a single photo into a fully immersive, personalized 3D environment that you can explore using VR or any web browser. Here are some of the images we have tested:</p>
+        <p><a href="https://github.com/MomentScape" class="button" style="background-color: #6e5494;">See how the magic works</a></p>
+    </header>
+    <div class="container">
+        <div class="gallery">
+            <!-- Bucees -->
+            <div class="gallery-item">
+                <img src="bucees/image.jpeg" alt="Bucees">
+                <div class="gallery-item-content">
+                    <div style="display: flex; justify-content: space-between; align-items: center;"><h3 style="margin: 0 0 15px;">Bucees</h3><a href="bucees/vr.html" class="button" style="margin-left: auto; margin-top: -10px;">View in VR</a></div>
+<p>A cozy exploration of Buc-ee's environment.</p>
+                </div>
+            </div>
+            <!-- Funnydog -->
+            <div class="gallery-item">
+                <img src="funnydog/image.jpeg" alt="Funny Dog">
+                <div class="gallery-item-content">
+                    <div style="display: flex; justify-content: space-between; align-items: center;"><h3 style="margin: 0 0 15px;">Funny Dog</h3><a href="funnydog/vr.html" class="button" style="margin-left: auto; margin-top: -10px;">View in VR</a></div>
+<p>A joyful setting featuring our funny dog friend.</p>
+                </div>
+            </div>
+            <!-- Lighthouse -->
+            <div class="gallery-item">
+                <img src="lighthouse/image.jpeg" alt="Lighthouse">
+                <div class="gallery-item-content">
+                    <div style="display: flex; justify-content: space-between; align-items: center;"><h3 style="margin: 0 0 15px;">Lighthouse</h3><a href="lighthouse/vr.html" class="button" style="margin-left: auto; margin-top: -10px;">View in VR</a></div>
+<p>A serene coastal lighthouse for peaceful moments.</p>
+                </div>
+            </div>
+            <!-- Star Wars -->
+            <div class="gallery-item">
+                <img src="starwars/image.jpeg" alt="Star Wars">
+                <div class="gallery-item-content">
+                    <div style="display: flex; justify-content: space-between; align-items: center;"><h3 style="margin: 0 0 15px;">Star Wars</h3><a href="starwars/vr.html" class="button" style="margin-left: auto; margin-top: -10px;">View in VR</a></div>
+<p>Step into a galaxy far, far away with Star Wars scenes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Made with ❤️ at <a href="https://devpost.com/software/memoryscape-iaj7yz">Madhacks 2024</a>
+    </footer>
+</body>
+</html>
